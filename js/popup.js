@@ -11,14 +11,14 @@ changeColor.addEventListener("click", async () => {
 
     chrome.scripting.executeScript({
         target: { tabId: tab.id },
-        func: setPageBackgroundColor,
+        func: runScript,
     });
 });
 
 // The body of this function will be executed as a content script inside the
 // current page
-function setPageBackgroundColor() {
+function runScript() {
     chrome.storage.sync.get("color", ({ color }) => {
-        document.body.style.backgroundColor = color;
+        location.href = "https://instagram.com";
     });
 }
