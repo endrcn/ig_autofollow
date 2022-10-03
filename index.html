@@ -12,9 +12,14 @@
 
     <label for="username" class="form-label">Username</label>
     <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">@</span>
+        <span class="input-group-text" id="basic-addon1">instagram.com/</span>
         <input type="text" class="form-control" id="username" placeholder="Username" aria-label="Username"
             aria-describedby="basic-addon1">
+    </div>
+
+    <label for="threshold" class="form-label">Follower Threshold</label>
+    <div class="input-group mb-3">
+        <input type="number" min="50" value="50" class="form-control" id="threshold" placeholder="50">
     </div>
 
     <label for="delay" class="form-label">Delay</label>
@@ -23,11 +28,9 @@
     </div>
 
     <div class="col-12">
-        <button type="button" class="btn btn-primary">Start</button>
-        <button type="button" class="btn btn-danger">Stop</button>
+        <button type="button" class="btn btn-primary" id="btnStart">Start</button>
+        <button type="button" class="btn btn-danger" id="btnStop">Stop</button>
     </div>
-
-    <!-- <button id="changeColor"></button> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
